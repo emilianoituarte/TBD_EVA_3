@@ -1,0 +1,174 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf400
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red10\green77\blue76;\red221\green221\blue221;
+\red203\green74\blue5;\red254\green208\blue77;\red223\green223\blue223;\red44\green44\blue44;\red89\green89\blue89;
+}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c0\c37255\c37255;\cssrgb\c89412\c89412\c89412;
+\cssrgb\c84314\c37255\c0;\cssrgb\c100000\c84314\c37255;\cssrgb\c90000\c90000\c90000;\cssrgb\c22745\c22745\c22745;\cssrgb\c42353\c42353\c42353;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 Last login: Thu May  2 08:15:30 on console\
+MacBook-Pro-de-Emiliano:~ EmilianoItuarte$ mysqlsh\
+MySQL Shell 8.0.14\
+\
+Copyright (c) 2016, 2019, Oracle and/or its affiliates. All rights reserved.\
+Oracle is a registered trademark of Oracle Corporation and/or its affiliates.\
+Other names may be trademarks of their respective owners.\
+\
+Type '\\help' or '\\?' for help; '\\quit' to exit.\
+\
+\cf3 \cb4  My\cf5 SQL \cf2 \cb6  JS \cb2 > \cb1 \\sql\
+Switching to SQL mode... Commands end with ;\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb5  SQL \cf2 \cb2 > \cb1 \\connect --mc root@localhost:8889\
+Creating a Classic session to 'root@localhost:8889'\
+Fetching schema names for autocompletion... Press ^C to stop.\
+Your MySQL connection id is 3\
+Server version: 5.7.23 MySQL Community Server (GPL)\
+No default schema selected; type \\use <schema> to set one.\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb5  SQL \cf2 \cb2 > \cb1 \\use eva_3\
+Default schema set to `eva_3`.\
+Fetching table and column names from `eva_3` for auto-completion... Press ^C to stop.\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 select function_while();\
+ERROR: 1305 (42000): FUNCTION eva_3.function_while does not exist\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 select funcion_while();\
++-----------------+\
+| funcion_while() |\
++-----------------+\
+|            NULL |\
++-----------------+\
+1 row in set (0.0018 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 select funcion_while();\
++-----------------+\
+| funcion_while() |\
++-----------------+\
+|            NULL |\
++-----------------+\
+1 row in set (0.0005 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 select funcion_while();\
++-----------------+\
+| funcion_while() |\
++-----------------+\
+|               5 |\
++-----------------+\
+1 row in set (0.0006 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 /use northwind\
+\cb2                                   -> \cb1 ;\
+ERROR: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/use northwind' at line 1\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 \\use northwind\
+Default schema set to `northwind`.\
+Fetching table and column names from `northwind` for auto-completion... Press ^C to stop.\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  northwind \cb5  SQL \cf2 \cb2 > \cb1 show tables;\
++----------------------+\
+| Tables_in_northwind  |\
++----------------------+\
+| Categories           |\
+| CustomerCustomerDemo |\
+| CustomerDemographics |\
+| Customers            |\
+| EmployeeTerritories  |\
+| Employees            |\
+| OrderDetails         |\
+| Orders               |\
+| Products             |\
+| Region               |\
+| Shippers             |\
+| Suppliers            |\
+| Territories          |\
++----------------------+\
+13 rows in set (0.0004 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  northwind \cb5  SQL \cf2 \cb2 > \cb1 desc customers;\
++--------------+-------------+------+-----+---------+-------+\
+| Field        | Type        | Null | Key | Default | Extra |\
++--------------+-------------+------+-----+---------+-------+\
+| CustomerID   | char(5)     | NO   | PRI | NULL    |       |\
+| CompanyName  | varchar(40) | NO   | MUL | NULL    |       |\
+| ContactName  | varchar(30) | YES  |     | NULL    |       |\
+| ContactTitle | varchar(30) | YES  |     | NULL    |       |\
+| Address      | varchar(60) | YES  |     | NULL    |       |\
+| City         | varchar(15) | YES  | MUL | NULL    |       |\
+| Region       | varchar(15) | YES  | MUL | NULL    |       |\
+| PostalCode   | varchar(10) | YES  | MUL | NULL    |       |\
+| Country      | varchar(15) | YES  |     | NULL    |       |\
+| Phone        | varchar(24) | YES  |     | NULL    |       |\
+| Fax          | varchar(24) | YES  |     | NULL    |       |\
++--------------+-------------+------+-----+---------+-------+\
+11 rows in set (0.0007 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  northwind \cb5  SQL \cf2 \cb2 > \cb1 desc order;\
+ERROR: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order' at line 1\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  northwind \cb5  SQL \cf2 \cb2 > \cb1 desc orders;\
++----------------+-------------+------+-----+---------+----------------+\
+| Field          | Type        | Null | Key | Default | Extra          |\
++----------------+-------------+------+-----+---------+----------------+\
+| OrderID        | int(11)     | NO   | PRI | NULL    | auto_increment |\
+| CustomerID     | char(5)     | YES  | MUL | NULL    |                |\
+| EmployeeID     | int(11)     | YES  | MUL | NULL    |                |\
+| OrderDate      | datetime    | YES  | MUL | NULL    |                |\
+| RequiredDate   | datetime    | YES  |     | NULL    |                |\
+| ShippedDate    | datetime    | YES  | MUL | NULL    |                |\
+| ShipVia        | int(11)     | YES  | MUL | NULL    |                |\
+| Freight        | double      | YES  |     | 0       |                |\
+| ShipName       | varchar(40) | YES  |     | NULL    |                |\
+| ShipAddress    | varchar(60) | YES  |     | NULL    |                |\
+| ShipCity       | varchar(15) | YES  |     | NULL    |                |\
+| ShipRegion     | varchar(15) | YES  |     | NULL    |                |\
+| ShipPostalCode | varchar(10) | YES  | MUL | NULL    |                |\
+| ShipCountry    | varchar(15) | YES  |     | NULL    |                |\
++----------------+-------------+------+-----+---------+----------------+\
+14 rows in set (0.0006 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  northwind \cb5  SQL \cf2 \cb2 > \cb1 desc products;\
++-----------------+-------------+------+-----+---------+----------------+\
+| Field           | Type        | Null | Key | Default | Extra          |\
++-----------------+-------------+------+-----+---------+----------------+\
+| ProductID       | int(11)     | NO   | PRI | NULL    | auto_increment |\
+| ProductName     | varchar(40) | NO   | MUL | NULL    |                |\
+| SupplierID      | int(11)     | YES  | MUL | NULL    |                |\
+| CategoryID      | int(11)     | YES  | MUL | NULL    |                |\
+| QuantityPerUnit | varchar(20) | YES  |     | NULL    |                |\
+| UnitPrice       | double      | YES  |     | 0       |                |\
+| UnitsInStock    | smallint(6) | YES  |     | 0       |                |\
+| UnitsOnOrder    | smallint(6) | YES  |     | 0       |                |\
+| ReorderLevel    | smallint(6) | YES  |     | 0       |                |\
+| Discontinued    | tinyint(1)  | NO   |     | 0       |                |\
++-----------------+-------------+------+-----+---------+----------------+\
+10 rows in set (0.0005 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  northwind \cb5  SQL \cf2 \cb2 > \cb1 select ventas_por_cliente;\
+ERROR: 1054 (42S22): Unknown column 'ventas_por_cliente' in 'field list'\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  northwind \cb5  SQL \cf2 \cb2 > \cb1 select ventas_por_cliente('SEVES');\
++-----------------------------+\
+| ventas_por_cliente('SEVES') |\
++-----------------------------+\
+|                       17172 |\
++-----------------------------+\
+1 row in set (0.0028 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  northwind \cb5  SQL \cf2 \cb2 > \cb1 select producto_mas_vendido();\
+ERROR: 1366 (HY000): Incorrect integer value: 'Cte de Blaye' for column 'producto_mas_vendido()' at row 1\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  northwind \cb5  SQL \cf2 \cb2 > \cb1 select producto_mas_vendido;\
+ERROR: 1054 (42S22): Unknown column 'producto_mas_vendido' in 'field list'\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  northwind \cb5  SQL \cf2 \cb2 > \cb1 select producto_mas_vendido();\
+ERROR: 1366 (HY000): Incorrect integer value: 'Cte de Blaye' for column 'producto_mas_vendido()' at row 1\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  northwind \cb5  SQL \cf2 \cb2 > \cb1 select producto_mas_vendido;\
+ERROR: 1054 (42S22): Unknown column 'producto_mas_vendido' in 'field list'\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  northwind \cb5  SQL \cf2 \cb2 > \cb1 \
+}

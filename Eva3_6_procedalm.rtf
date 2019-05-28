@@ -1,0 +1,1051 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf400
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red10\green77\blue76;\red221\green221\blue221;
+\red203\green74\blue5;\red254\green208\blue77;\red223\green223\blue223;\red44\green44\blue44;\red89\green89\blue89;
+}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c0\c37255\c37255;\cssrgb\c89412\c89412\c89412;
+\cssrgb\c84314\c37255\c0;\cssrgb\c100000\c84314\c37255;\cssrgb\c90000\c90000\c90000;\cssrgb\c22745\c22745\c22745;\cssrgb\c42353\c42353\c42353;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 Last login: Tue May  7 12:06:36 on ttys000\
+MacBook-Pro-de-Emiliano:~ EmilianoItuarte$ mysqlsh\
+MySQL Shell 8.0.14\
+\
+Copyright (c) 2016, 2019, Oracle and/or its affiliates. All rights reserved.\
+Oracle is a registered trademark of Oracle Corporation and/or its affiliates.\
+Other names may be trademarks of their respective owners.\
+\
+Type '\\help' or '\\?' for help; '\\quit' to exit.\
+\
+\cf3 \cb4  My\cf5 SQL \cf2 \cb6  JS \cb2 > \cb1 \\sql\
+Switching to SQL mode... Commands end with ;\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb5  SQL \cf2 \cb2 > \cb1 \\connect --mc root@localhost:8889\
+Creating a Classic session to 'root@localhost:8889'\
+Fetching schema names for autocompletion... Press ^C to stop.\
+Your MySQL connection id is 6\
+Server version: 5.7.23 MySQL Community Server (GPL)\
+No default schema selected; type \\use <schema> to set one.\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb5  SQL \cf2 \cb2 > \cb1 \\use eva_3\
+Default schema set to `eva_3`.\
+Fetching table and column names from `eva_3` for auto-completion... Press ^C to stop.\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 show tables;\
++-----------------+\
+| Tables_in_eva_3 |\
++-----------------+\
+| copia_actor     |\
+| numeros         |\
++-----------------+\
+2 rows in set (0.0005 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 call consulta_actores();\
+ERROR: 1146 (42S02): Table 'eva_3.copia_actores' doesn't exist\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 call consulta_actores();\
++----------+-------------+--------------+---------------------+\
+| actor_id | first_name  | last_name    | last_update         |\
++----------+-------------+--------------+---------------------+\
+|        1 | PENELOPE    | GUINESS      | 2006-02-15 04:34:33 |\
+|        2 | NICK        | WAHLBERG     | 2006-02-15 04:34:33 |\
+|        3 | ED          | CHASE        | 2006-02-15 04:34:33 |\
+|        4 | JENNIFER    | DAVIS        | 2006-02-15 04:34:33 |\
+|        5 | JOHNNY      | LOLLOBRIGIDA | 2006-02-15 04:34:33 |\
+|        6 | BETTE       | NICHOLSON    | 2006-02-15 04:34:33 |\
+|        7 | GRACE       | MOSTEL       | 2006-02-15 04:34:33 |\
+|        8 | MATTHEW     | JOHANSSON    | 2006-02-15 04:34:33 |\
+|        9 | JOE         | SWANK        | 2006-02-15 04:34:33 |\
+|       10 | CHRISTIAN   | GABLE        | 2006-02-15 04:34:33 |\
+|       11 | ZERO        | CAGE         | 2006-02-15 04:34:33 |\
+|       12 | KARL        | BERRY        | 2006-02-15 04:34:33 |\
+|       13 | UMA         | WOOD         | 2006-02-15 04:34:33 |\
+|       14 | VIVIEN      | BERGEN       | 2006-02-15 04:34:33 |\
+|       15 | CUBA        | OLIVIER      | 2006-02-15 04:34:33 |\
+|       16 | FRED        | COSTNER      | 2006-02-15 04:34:33 |\
+|       17 | HELEN       | VOIGHT       | 2006-02-15 04:34:33 |\
+|       18 | DAN         | TORN         | 2006-02-15 04:34:33 |\
+|       19 | BOB         | FAWCETT      | 2006-02-15 04:34:33 |\
+|       20 | LUCILLE     | TRACY        | 2006-02-15 04:34:33 |\
+|       21 | KIRSTEN     | PALTROW      | 2006-02-15 04:34:33 |\
+|       22 | ELVIS       | MARX         | 2006-02-15 04:34:33 |\
+|       23 | SANDRA      | KILMER       | 2006-02-15 04:34:33 |\
+|       24 | CAMERON     | STREEP       | 2006-02-15 04:34:33 |\
+|       25 | KEVIN       | BLOOM        | 2006-02-15 04:34:33 |\
+|       26 | RIP         | CRAWFORD     | 2006-02-15 04:34:33 |\
+|       27 | JULIA       | MCQUEEN      | 2006-02-15 04:34:33 |\
+|       28 | WOODY       | HOFFMAN      | 2006-02-15 04:34:33 |\
+|       29 | ALEC        | WAYNE        | 2006-02-15 04:34:33 |\
+|       30 | SANDRA      | PECK         | 2006-02-15 04:34:33 |\
+|       31 | SISSY       | SOBIESKI     | 2006-02-15 04:34:33 |\
+|       32 | TIM         | HACKMAN      | 2006-02-15 04:34:33 |\
+|       33 | MILLA       | PECK         | 2006-02-15 04:34:33 |\
+|       34 | AUDREY      | OLIVIER      | 2006-02-15 04:34:33 |\
+|       35 | JUDY        | DEAN         | 2006-02-15 04:34:33 |\
+|       36 | BURT        | DUKAKIS      | 2006-02-15 04:34:33 |\
+|       37 | VAL         | BOLGER       | 2006-02-15 04:34:33 |\
+|       38 | TOM         | MCKELLEN     | 2006-02-15 04:34:33 |\
+|       39 | GOLDIE      | BRODY        | 2006-02-15 04:34:33 |\
+|       40 | JOHNNY      | CAGE         | 2006-02-15 04:34:33 |\
+|       41 | JODIE       | DEGENERES    | 2006-02-15 04:34:33 |\
+|       42 | TOM         | MIRANDA      | 2006-02-15 04:34:33 |\
+|       43 | KIRK        | JOVOVICH     | 2006-02-15 04:34:33 |\
+|       44 | NICK        | STALLONE     | 2006-02-15 04:34:33 |\
+|       45 | REESE       | KILMER       | 2006-02-15 04:34:33 |\
+|       46 | PARKER      | GOLDBERG     | 2006-02-15 04:34:33 |\
+|       47 | JULIA       | BARRYMORE    | 2006-02-15 04:34:33 |\
+|       48 | FRANCES     | DAY-LEWIS    | 2006-02-15 04:34:33 |\
+|       49 | ANNE        | CRONYN       | 2006-02-15 04:34:33 |\
+|       50 | NATALIE     | HOPKINS      | 2006-02-15 04:34:33 |\
+|       51 | GARY        | PHOENIX      | 2006-02-15 04:34:33 |\
+|       52 | CARMEN      | HUNT         | 2006-02-15 04:34:33 |\
+|       53 | MENA        | TEMPLE       | 2006-02-15 04:34:33 |\
+|       54 | PENELOPE    | PINKETT      | 2006-02-15 04:34:33 |\
+|       55 | FAY         | KILMER       | 2006-02-15 04:34:33 |\
+|       56 | DAN         | HARRIS       | 2006-02-15 04:34:33 |\
+|       57 | JUDE        | CRUISE       | 2006-02-15 04:34:33 |\
+|       58 | CHRISTIAN   | AKROYD       | 2006-02-15 04:34:33 |\
+|       59 | DUSTIN      | TAUTOU       | 2006-02-15 04:34:33 |\
+|       60 | HENRY       | BERRY        | 2006-02-15 04:34:33 |\
+|       61 | CHRISTIAN   | NEESON       | 2006-02-15 04:34:33 |\
+|       62 | JAYNE       | NEESON       | 2006-02-15 04:34:33 |\
+|       63 | CAMERON     | WRAY         | 2006-02-15 04:34:33 |\
+|       64 | RAY         | JOHANSSON    | 2006-02-15 04:34:33 |\
+|       65 | ANGELA      | HUDSON       | 2006-02-15 04:34:33 |\
+|       66 | MARY        | TANDY        | 2006-02-15 04:34:33 |\
+|       67 | JESSICA     | BAILEY       | 2006-02-15 04:34:33 |\
+|       68 | RIP         | WINSLET      | 2006-02-15 04:34:33 |\
+|       69 | KENNETH     | PALTROW      | 2006-02-15 04:34:33 |\
+|       70 | MICHELLE    | MCCONAUGHEY  | 2006-02-15 04:34:33 |\
+|       71 | ADAM        | GRANT        | 2006-02-15 04:34:33 |\
+|       72 | SEAN        | WILLIAMS     | 2006-02-15 04:34:33 |\
+|       73 | GARY        | PENN         | 2006-02-15 04:34:33 |\
+|       74 | MILLA       | KEITEL       | 2006-02-15 04:34:33 |\
+|       75 | BURT        | POSEY        | 2006-02-15 04:34:33 |\
+|       76 | ANGELINA    | ASTAIRE      | 2006-02-15 04:34:33 |\
+|       77 | CARY        | MCCONAUGHEY  | 2006-02-15 04:34:33 |\
+|       78 | GROUCHO     | SINATRA      | 2006-02-15 04:34:33 |\
+|       79 | MAE         | HOFFMAN      | 2006-02-15 04:34:33 |\
+|       80 | RALPH       | CRUZ         | 2006-02-15 04:34:33 |\
+|       81 | SCARLETT    | DAMON        | 2006-02-15 04:34:33 |\
+|       82 | WOODY       | JOLIE        | 2006-02-15 04:34:33 |\
+|       83 | BEN         | WILLIS       | 2006-02-15 04:34:33 |\
+|       84 | JAMES       | PITT         | 2006-02-15 04:34:33 |\
+|       85 | MINNIE      | ZELLWEGER    | 2006-02-15 04:34:33 |\
+|       86 | GREG        | CHAPLIN      | 2006-02-15 04:34:33 |\
+|       87 | SPENCER     | PECK         | 2006-02-15 04:34:33 |\
+|       88 | KENNETH     | PESCI        | 2006-02-15 04:34:33 |\
+|       89 | CHARLIZE    | DENCH        | 2006-02-15 04:34:33 |\
+|       90 | SEAN        | GUINESS      | 2006-02-15 04:34:33 |\
+|       91 | CHRISTOPHER | BERRY        | 2006-02-15 04:34:33 |\
+|       92 | KIRSTEN     | AKROYD       | 2006-02-15 04:34:33 |\
+|       93 | ELLEN       | PRESLEY      | 2006-02-15 04:34:33 |\
+|       94 | KENNETH     | TORN         | 2006-02-15 04:34:33 |\
+|       95 | DARYL       | WAHLBERG     | 2006-02-15 04:34:33 |\
+|       96 | GENE        | WILLIS       | 2006-02-15 04:34:33 |\
+|       97 | MEG         | HAWKE        | 2006-02-15 04:34:33 |\
+|       98 | CHRIS       | BRIDGES      | 2006-02-15 04:34:33 |\
+|       99 | JIM         | MOSTEL       | 2006-02-15 04:34:33 |\
+|      100 | SPENCER     | DEPP         | 2006-02-15 04:34:33 |\
+|      101 | SUSAN       | DAVIS        | 2006-02-15 04:34:33 |\
+|      102 | WALTER      | TORN         | 2006-02-15 04:34:33 |\
+|      103 | MATTHEW     | LEIGH        | 2006-02-15 04:34:33 |\
+|      104 | PENELOPE    | CRONYN       | 2006-02-15 04:34:33 |\
+|      105 | SIDNEY      | CROWE        | 2006-02-15 04:34:33 |\
+|      106 | GROUCHO     | DUNST        | 2006-02-15 04:34:33 |\
+|      107 | GINA        | DEGENERES    | 2006-02-15 04:34:33 |\
+|      108 | WARREN      | NOLTE        | 2006-02-15 04:34:33 |\
+|      109 | SYLVESTER   | DERN         | 2006-02-15 04:34:33 |\
+|      110 | SUSAN       | DAVIS        | 2006-02-15 04:34:33 |\
+|      111 | CAMERON     | ZELLWEGER    | 2006-02-15 04:34:33 |\
+|      112 | RUSSELL     | BACALL       | 2006-02-15 04:34:33 |\
+|      113 | MORGAN      | HOPKINS      | 2006-02-15 04:34:33 |\
+|      114 | MORGAN      | MCDORMAND    | 2006-02-15 04:34:33 |\
+|      115 | HARRISON    | BALE         | 2006-02-15 04:34:33 |\
+|      116 | DAN         | STREEP       | 2006-02-15 04:34:33 |\
+|      117 | RENEE       | TRACY        | 2006-02-15 04:34:33 |\
+|      118 | CUBA        | ALLEN        | 2006-02-15 04:34:33 |\
+|      119 | WARREN      | JACKMAN      | 2006-02-15 04:34:33 |\
+|      120 | PENELOPE    | MONROE       | 2006-02-15 04:34:33 |\
+|      121 | LIZA        | BERGMAN      | 2006-02-15 04:34:33 |\
+|      122 | SALMA       | NOLTE        | 2006-02-15 04:34:33 |\
+|      123 | JULIANNE    | DENCH        | 2006-02-15 04:34:33 |\
+|      124 | SCARLETT    | BENING       | 2006-02-15 04:34:33 |\
+|      125 | ALBERT      | NOLTE        | 2006-02-15 04:34:33 |\
+|      126 | FRANCES     | TOMEI        | 2006-02-15 04:34:33 |\
+|      127 | KEVIN       | GARLAND      | 2006-02-15 04:34:33 |\
+|      128 | CATE        | MCQUEEN      | 2006-02-15 04:34:33 |\
+|      129 | DARYL       | CRAWFORD     | 2006-02-15 04:34:33 |\
+|      130 | GRETA       | KEITEL       | 2006-02-15 04:34:33 |\
+|      131 | JANE        | JACKMAN      | 2006-02-15 04:34:33 |\
+|      132 | ADAM        | HOPPER       | 2006-02-15 04:34:33 |\
+|      133 | RICHARD     | PENN         | 2006-02-15 04:34:33 |\
+|      134 | GENE        | HOPKINS      | 2006-02-15 04:34:33 |\
+|      135 | RITA        | REYNOLDS     | 2006-02-15 04:34:33 |\
+|      136 | ED          | MANSFIELD    | 2006-02-15 04:34:33 |\
+|      137 | MORGAN      | WILLIAMS     | 2006-02-15 04:34:33 |\
+|      138 | LUCILLE     | DEE          | 2006-02-15 04:34:33 |\
+|      139 | EWAN        | GOODING      | 2006-02-15 04:34:33 |\
+|      140 | WHOOPI      | HURT         | 2006-02-15 04:34:33 |\
+|      141 | CATE        | HARRIS       | 2006-02-15 04:34:33 |\
+|      142 | JADA        | RYDER        | 2006-02-15 04:34:33 |\
+|      143 | RIVER       | DEAN         | 2006-02-15 04:34:33 |\
+|      144 | ANGELA      | WITHERSPOON  | 2006-02-15 04:34:33 |\
+|      145 | KIM         | ALLEN        | 2006-02-15 04:34:33 |\
+|      146 | ALBERT      | JOHANSSON    | 2006-02-15 04:34:33 |\
+|      147 | FAY         | WINSLET      | 2006-02-15 04:34:33 |\
+|      148 | EMILY       | DEE          | 2006-02-15 04:34:33 |\
+|      149 | RUSSELL     | TEMPLE       | 2006-02-15 04:34:33 |\
+|      150 | JAYNE       | NOLTE        | 2006-02-15 04:34:33 |\
+|      151 | GEOFFREY    | HESTON       | 2006-02-15 04:34:33 |\
+|      152 | BEN         | HARRIS       | 2006-02-15 04:34:33 |\
+|      153 | MINNIE      | KILMER       | 2006-02-15 04:34:33 |\
+|      154 | MERYL       | GIBSON       | 2006-02-15 04:34:33 |\
+|      155 | IAN         | TANDY        | 2006-02-15 04:34:33 |\
+|      156 | FAY         | WOOD         | 2006-02-15 04:34:33 |\
+|      157 | GRETA       | MALDEN       | 2006-02-15 04:34:33 |\
+|      158 | VIVIEN      | BASINGER     | 2006-02-15 04:34:33 |\
+|      159 | LAURA       | BRODY        | 2006-02-15 04:34:33 |\
+|      160 | CHRIS       | DEPP         | 2006-02-15 04:34:33 |\
+|      161 | HARVEY      | HOPE         | 2006-02-15 04:34:33 |\
+|      162 | OPRAH       | KILMER       | 2006-02-15 04:34:33 |\
+|      163 | CHRISTOPHER | WEST         | 2006-02-15 04:34:33 |\
+|      164 | HUMPHREY    | WILLIS       | 2006-02-15 04:34:33 |\
+|      165 | AL          | GARLAND      | 2006-02-15 04:34:33 |\
+|      166 | NICK        | DEGENERES    | 2006-02-15 04:34:33 |\
+|      167 | LAURENCE    | BULLOCK      | 2006-02-15 04:34:33 |\
+|      168 | WILL        | WILSON       | 2006-02-15 04:34:33 |\
+|      169 | KENNETH     | HOFFMAN      | 2006-02-15 04:34:33 |\
+|      170 | MENA        | HOPPER       | 2006-02-15 04:34:33 |\
+|      171 | OLYMPIA     | PFEIFFER     | 2006-02-15 04:34:33 |\
+|      172 | GROUCHO     | WILLIAMS     | 2006-02-15 04:34:33 |\
+|      173 | ALAN        | DREYFUSS     | 2006-02-15 04:34:33 |\
+|      174 | MICHAEL     | BENING       | 2006-02-15 04:34:33 |\
+|      175 | WILLIAM     | HACKMAN      | 2006-02-15 04:34:33 |\
+|      176 | JON         | CHASE        | 2006-02-15 04:34:33 |\
+|      177 | GENE        | MCKELLEN     | 2006-02-15 04:34:33 |\
+|      178 | LISA        | MONROE       | 2006-02-15 04:34:33 |\
+|      179 | ED          | GUINESS      | 2006-02-15 04:34:33 |\
+|      180 | JEFF        | SILVERSTONE  | 2006-02-15 04:34:33 |\
+|      181 | MATTHEW     | CARREY       | 2006-02-15 04:34:33 |\
+|      182 | DEBBIE      | AKROYD       | 2006-02-15 04:34:33 |\
+|      183 | RUSSELL     | CLOSE        | 2006-02-15 04:34:33 |\
+|      184 | HUMPHREY    | GARLAND      | 2006-02-15 04:34:33 |\
+|      185 | MICHAEL     | BOLGER       | 2006-02-15 04:34:33 |\
+|      186 | JULIA       | ZELLWEGER    | 2006-02-15 04:34:33 |\
+|      187 | RENEE       | BALL         | 2006-02-15 04:34:33 |\
+|      188 | ROCK        | DUKAKIS      | 2006-02-15 04:34:33 |\
+|      189 | CUBA        | BIRCH        | 2006-02-15 04:34:33 |\
+|      190 | AUDREY      | BAILEY       | 2006-02-15 04:34:33 |\
+|      191 | GREGORY     | GOODING      | 2006-02-15 04:34:33 |\
+|      192 | JOHN        | SUVARI       | 2006-02-15 04:34:33 |\
+|      193 | BURT        | TEMPLE       | 2006-02-15 04:34:33 |\
+|      194 | MERYL       | ALLEN        | 2006-02-15 04:34:33 |\
+|      195 | JAYNE       | SILVERSTONE  | 2006-02-15 04:34:33 |\
+|      196 | BELA        | WALKEN       | 2006-02-15 04:34:33 |\
+|      197 | REESE       | WEST         | 2006-02-15 04:34:33 |\
+|      198 | MARY        | KEITEL       | 2006-02-15 04:34:33 |\
+|      199 | JULIA       | FAWCETT      | 2006-02-15 04:34:33 |\
+|      200 | THORA       | TEMPLE       | 2006-02-15 04:34:33 |\
+|        0 | Juanelo     | Jolore       | 2019-04-30 12:21:29 |\
++----------+-------------+--------------+---------------------+\
+201 rows in set (0.0032 sec)\
++----------+-------------+--------------+---------------------+\
+| actor_id | first_name  | last_name    | last_update         |\
++----------+-------------+--------------+---------------------+\
+|        1 | PENELOPE    | GUINESS      | 2006-02-15 04:34:33 |\
+|        2 | NICK        | WAHLBERG     | 2006-02-15 04:34:33 |\
+|        3 | ED          | CHASE        | 2006-02-15 04:34:33 |\
+|        4 | JENNIFER    | DAVIS        | 2006-02-15 04:34:33 |\
+|        5 | JOHNNY      | LOLLOBRIGIDA | 2006-02-15 04:34:33 |\
+|        6 | BETTE       | NICHOLSON    | 2006-02-15 04:34:33 |\
+|        7 | GRACE       | MOSTEL       | 2006-02-15 04:34:33 |\
+|        8 | MATTHEW     | JOHANSSON    | 2006-02-15 04:34:33 |\
+|        9 | JOE         | SWANK        | 2006-02-15 04:34:33 |\
+|       10 | CHRISTIAN   | GABLE        | 2006-02-15 04:34:33 |\
+|       11 | ZERO        | CAGE         | 2006-02-15 04:34:33 |\
+|       12 | KARL        | BERRY        | 2006-02-15 04:34:33 |\
+|       13 | UMA         | WOOD         | 2006-02-15 04:34:33 |\
+|       14 | VIVIEN      | BERGEN       | 2006-02-15 04:34:33 |\
+|       15 | CUBA        | OLIVIER      | 2006-02-15 04:34:33 |\
+|       16 | FRED        | COSTNER      | 2006-02-15 04:34:33 |\
+|       17 | HELEN       | VOIGHT       | 2006-02-15 04:34:33 |\
+|       18 | DAN         | TORN         | 2006-02-15 04:34:33 |\
+|       19 | BOB         | FAWCETT      | 2006-02-15 04:34:33 |\
+|       20 | LUCILLE     | TRACY        | 2006-02-15 04:34:33 |\
+|       21 | KIRSTEN     | PALTROW      | 2006-02-15 04:34:33 |\
+|       22 | ELVIS       | MARX         | 2006-02-15 04:34:33 |\
+|       23 | SANDRA      | KILMER       | 2006-02-15 04:34:33 |\
+|       24 | CAMERON     | STREEP       | 2006-02-15 04:34:33 |\
+|       25 | KEVIN       | BLOOM        | 2006-02-15 04:34:33 |\
+|       26 | RIP         | CRAWFORD     | 2006-02-15 04:34:33 |\
+|       27 | JULIA       | MCQUEEN      | 2006-02-15 04:34:33 |\
+|       28 | WOODY       | HOFFMAN      | 2006-02-15 04:34:33 |\
+|       29 | ALEC        | WAYNE        | 2006-02-15 04:34:33 |\
+|       30 | SANDRA      | PECK         | 2006-02-15 04:34:33 |\
+|       31 | SISSY       | SOBIESKI     | 2006-02-15 04:34:33 |\
+|       32 | TIM         | HACKMAN      | 2006-02-15 04:34:33 |\
+|       33 | MILLA       | PECK         | 2006-02-15 04:34:33 |\
+|       34 | AUDREY      | OLIVIER      | 2006-02-15 04:34:33 |\
+|       35 | JUDY        | DEAN         | 2006-02-15 04:34:33 |\
+|       36 | BURT        | DUKAKIS      | 2006-02-15 04:34:33 |\
+|       37 | VAL         | BOLGER       | 2006-02-15 04:34:33 |\
+|       38 | TOM         | MCKELLEN     | 2006-02-15 04:34:33 |\
+|       39 | GOLDIE      | BRODY        | 2006-02-15 04:34:33 |\
+|       40 | JOHNNY      | CAGE         | 2006-02-15 04:34:33 |\
+|       41 | JODIE       | DEGENERES    | 2006-02-15 04:34:33 |\
+|       42 | TOM         | MIRANDA      | 2006-02-15 04:34:33 |\
+|       43 | KIRK        | JOVOVICH     | 2006-02-15 04:34:33 |\
+|       44 | NICK        | STALLONE     | 2006-02-15 04:34:33 |\
+|       45 | REESE       | KILMER       | 2006-02-15 04:34:33 |\
+|       46 | PARKER      | GOLDBERG     | 2006-02-15 04:34:33 |\
+|       47 | JULIA       | BARRYMORE    | 2006-02-15 04:34:33 |\
+|       48 | FRANCES     | DAY-LEWIS    | 2006-02-15 04:34:33 |\
+|       49 | ANNE        | CRONYN       | 2006-02-15 04:34:33 |\
+|       50 | NATALIE     | HOPKINS      | 2006-02-15 04:34:33 |\
+|       51 | GARY        | PHOENIX      | 2006-02-15 04:34:33 |\
+|       52 | CARMEN      | HUNT         | 2006-02-15 04:34:33 |\
+|       53 | MENA        | TEMPLE       | 2006-02-15 04:34:33 |\
+|       54 | PENELOPE    | PINKETT      | 2006-02-15 04:34:33 |\
+|       55 | FAY         | KILMER       | 2006-02-15 04:34:33 |\
+|       56 | DAN         | HARRIS       | 2006-02-15 04:34:33 |\
+|       57 | JUDE        | CRUISE       | 2006-02-15 04:34:33 |\
+|       58 | CHRISTIAN   | AKROYD       | 2006-02-15 04:34:33 |\
+|       59 | DUSTIN      | TAUTOU       | 2006-02-15 04:34:33 |\
+|       60 | HENRY       | BERRY        | 2006-02-15 04:34:33 |\
+|       61 | CHRISTIAN   | NEESON       | 2006-02-15 04:34:33 |\
+|       62 | JAYNE       | NEESON       | 2006-02-15 04:34:33 |\
+|       63 | CAMERON     | WRAY         | 2006-02-15 04:34:33 |\
+|       64 | RAY         | JOHANSSON    | 2006-02-15 04:34:33 |\
+|       65 | ANGELA      | HUDSON       | 2006-02-15 04:34:33 |\
+|       66 | MARY        | TANDY        | 2006-02-15 04:34:33 |\
+|       67 | JESSICA     | BAILEY       | 2006-02-15 04:34:33 |\
+|       68 | RIP         | WINSLET      | 2006-02-15 04:34:33 |\
+|       69 | KENNETH     | PALTROW      | 2006-02-15 04:34:33 |\
+|       70 | MICHELLE    | MCCONAUGHEY  | 2006-02-15 04:34:33 |\
+|       71 | ADAM        | GRANT        | 2006-02-15 04:34:33 |\
+|       72 | SEAN        | WILLIAMS     | 2006-02-15 04:34:33 |\
+|       73 | GARY        | PENN         | 2006-02-15 04:34:33 |\
+|       74 | MILLA       | KEITEL       | 2006-02-15 04:34:33 |\
+|       75 | BURT        | POSEY        | 2006-02-15 04:34:33 |\
+|       76 | ANGELINA    | ASTAIRE      | 2006-02-15 04:34:33 |\
+|       77 | CARY        | MCCONAUGHEY  | 2006-02-15 04:34:33 |\
+|       78 | GROUCHO     | SINATRA      | 2006-02-15 04:34:33 |\
+|       79 | MAE         | HOFFMAN      | 2006-02-15 04:34:33 |\
+|       80 | RALPH       | CRUZ         | 2006-02-15 04:34:33 |\
+|       81 | SCARLETT    | DAMON        | 2006-02-15 04:34:33 |\
+|       82 | WOODY       | JOLIE        | 2006-02-15 04:34:33 |\
+|       83 | BEN         | WILLIS       | 2006-02-15 04:34:33 |\
+|       84 | JAMES       | PITT         | 2006-02-15 04:34:33 |\
+|       85 | MINNIE      | ZELLWEGER    | 2006-02-15 04:34:33 |\
+|       86 | GREG        | CHAPLIN      | 2006-02-15 04:34:33 |\
+|       87 | SPENCER     | PECK         | 2006-02-15 04:34:33 |\
+|       88 | KENNETH     | PESCI        | 2006-02-15 04:34:33 |\
+|       89 | CHARLIZE    | DENCH        | 2006-02-15 04:34:33 |\
+|       90 | SEAN        | GUINESS      | 2006-02-15 04:34:33 |\
+|       91 | CHRISTOPHER | BERRY        | 2006-02-15 04:34:33 |\
+|       92 | KIRSTEN     | AKROYD       | 2006-02-15 04:34:33 |\
+|       93 | ELLEN       | PRESLEY      | 2006-02-15 04:34:33 |\
+|       94 | KENNETH     | TORN         | 2006-02-15 04:34:33 |\
+|       95 | DARYL       | WAHLBERG     | 2006-02-15 04:34:33 |\
+|       96 | GENE        | WILLIS       | 2006-02-15 04:34:33 |\
+|       97 | MEG         | HAWKE        | 2006-02-15 04:34:33 |\
+|       98 | CHRIS       | BRIDGES      | 2006-02-15 04:34:33 |\
+|       99 | JIM         | MOSTEL       | 2006-02-15 04:34:33 |\
+|      100 | SPENCER     | DEPP         | 2006-02-15 04:34:33 |\
+|      101 | SUSAN       | DAVIS        | 2006-02-15 04:34:33 |\
+|      102 | WALTER      | TORN         | 2006-02-15 04:34:33 |\
+|      103 | MATTHEW     | LEIGH        | 2006-02-15 04:34:33 |\
+|      104 | PENELOPE    | CRONYN       | 2006-02-15 04:34:33 |\
+|      105 | SIDNEY      | CROWE        | 2006-02-15 04:34:33 |\
+|      106 | GROUCHO     | DUNST        | 2006-02-15 04:34:33 |\
+|      107 | GINA        | DEGENERES    | 2006-02-15 04:34:33 |\
+|      108 | WARREN      | NOLTE        | 2006-02-15 04:34:33 |\
+|      109 | SYLVESTER   | DERN         | 2006-02-15 04:34:33 |\
+|      110 | SUSAN       | DAVIS        | 2006-02-15 04:34:33 |\
+|      111 | CAMERON     | ZELLWEGER    | 2006-02-15 04:34:33 |\
+|      112 | RUSSELL     | BACALL       | 2006-02-15 04:34:33 |\
+|      113 | MORGAN      | HOPKINS      | 2006-02-15 04:34:33 |\
+|      114 | MORGAN      | MCDORMAND    | 2006-02-15 04:34:33 |\
+|      115 | HARRISON    | BALE         | 2006-02-15 04:34:33 |\
+|      116 | DAN         | STREEP       | 2006-02-15 04:34:33 |\
+|      117 | RENEE       | TRACY        | 2006-02-15 04:34:33 |\
+|      118 | CUBA        | ALLEN        | 2006-02-15 04:34:33 |\
+|      119 | WARREN      | JACKMAN      | 2006-02-15 04:34:33 |\
+|      120 | PENELOPE    | MONROE       | 2006-02-15 04:34:33 |\
+|      121 | LIZA        | BERGMAN      | 2006-02-15 04:34:33 |\
+|      122 | SALMA       | NOLTE        | 2006-02-15 04:34:33 |\
+|      123 | JULIANNE    | DENCH        | 2006-02-15 04:34:33 |\
+|      124 | SCARLETT    | BENING       | 2006-02-15 04:34:33 |\
+|      125 | ALBERT      | NOLTE        | 2006-02-15 04:34:33 |\
+|      126 | FRANCES     | TOMEI        | 2006-02-15 04:34:33 |\
+|      127 | KEVIN       | GARLAND      | 2006-02-15 04:34:33 |\
+|      128 | CATE        | MCQUEEN      | 2006-02-15 04:34:33 |\
+|      129 | DARYL       | CRAWFORD     | 2006-02-15 04:34:33 |\
+|      130 | GRETA       | KEITEL       | 2006-02-15 04:34:33 |\
+|      131 | JANE        | JACKMAN      | 2006-02-15 04:34:33 |\
+|      132 | ADAM        | HOPPER       | 2006-02-15 04:34:33 |\
+|      133 | RICHARD     | PENN         | 2006-02-15 04:34:33 |\
+|      134 | GENE        | HOPKINS      | 2006-02-15 04:34:33 |\
+|      135 | RITA        | REYNOLDS     | 2006-02-15 04:34:33 |\
+|      136 | ED          | MANSFIELD    | 2006-02-15 04:34:33 |\
+|      137 | MORGAN      | WILLIAMS     | 2006-02-15 04:34:33 |\
+|      138 | LUCILLE     | DEE          | 2006-02-15 04:34:33 |\
+|      139 | EWAN        | GOODING      | 2006-02-15 04:34:33 |\
+|      140 | WHOOPI      | HURT         | 2006-02-15 04:34:33 |\
+|      141 | CATE        | HARRIS       | 2006-02-15 04:34:33 |\
+|      142 | JADA        | RYDER        | 2006-02-15 04:34:33 |\
+|      143 | RIVER       | DEAN         | 2006-02-15 04:34:33 |\
+|      144 | ANGELA      | WITHERSPOON  | 2006-02-15 04:34:33 |\
+|      145 | KIM         | ALLEN        | 2006-02-15 04:34:33 |\
+|      146 | ALBERT      | JOHANSSON    | 2006-02-15 04:34:33 |\
+|      147 | FAY         | WINSLET      | 2006-02-15 04:34:33 |\
+|      148 | EMILY       | DEE          | 2006-02-15 04:34:33 |\
+|      149 | RUSSELL     | TEMPLE       | 2006-02-15 04:34:33 |\
+|      150 | JAYNE       | NOLTE        | 2006-02-15 04:34:33 |\
+|      151 | GEOFFREY    | HESTON       | 2006-02-15 04:34:33 |\
+|      152 | BEN         | HARRIS       | 2006-02-15 04:34:33 |\
+|      153 | MINNIE      | KILMER       | 2006-02-15 04:34:33 |\
+|      154 | MERYL       | GIBSON       | 2006-02-15 04:34:33 |\
+|      155 | IAN         | TANDY        | 2006-02-15 04:34:33 |\
+|      156 | FAY         | WOOD         | 2006-02-15 04:34:33 |\
+|      157 | GRETA       | MALDEN       | 2006-02-15 04:34:33 |\
+|      158 | VIVIEN      | BASINGER     | 2006-02-15 04:34:33 |\
+|      159 | LAURA       | BRODY        | 2006-02-15 04:34:33 |\
+|      160 | CHRIS       | DEPP         | 2006-02-15 04:34:33 |\
+|      161 | HARVEY      | HOPE         | 2006-02-15 04:34:33 |\
+|      162 | OPRAH       | KILMER       | 2006-02-15 04:34:33 |\
+|      163 | CHRISTOPHER | WEST         | 2006-02-15 04:34:33 |\
+|      164 | HUMPHREY    | WILLIS       | 2006-02-15 04:34:33 |\
+|      165 | AL          | GARLAND      | 2006-02-15 04:34:33 |\
+|      166 | NICK        | DEGENERES    | 2006-02-15 04:34:33 |\
+|      167 | LAURENCE    | BULLOCK      | 2006-02-15 04:34:33 |\
+|      168 | WILL        | WILSON       | 2006-02-15 04:34:33 |\
+|      169 | KENNETH     | HOFFMAN      | 2006-02-15 04:34:33 |\
+|      170 | MENA        | HOPPER       | 2006-02-15 04:34:33 |\
+|      171 | OLYMPIA     | PFEIFFER     | 2006-02-15 04:34:33 |\
+|      172 | GROUCHO     | WILLIAMS     | 2006-02-15 04:34:33 |\
+|      173 | ALAN        | DREYFUSS     | 2006-02-15 04:34:33 |\
+|      174 | MICHAEL     | BENING       | 2006-02-15 04:34:33 |\
+|      175 | WILLIAM     | HACKMAN      | 2006-02-15 04:34:33 |\
+|      176 | JON         | CHASE        | 2006-02-15 04:34:33 |\
+|      177 | GENE        | MCKELLEN     | 2006-02-15 04:34:33 |\
+|      178 | LISA        | MONROE       | 2006-02-15 04:34:33 |\
+|      179 | ED          | GUINESS      | 2006-02-15 04:34:33 |\
+|      180 | JEFF        | SILVERSTONE  | 2006-02-15 04:34:33 |\
+|      181 | MATTHEW     | CARREY       | 2006-02-15 04:34:33 |\
+|      182 | DEBBIE      | AKROYD       | 2006-02-15 04:34:33 |\
+|      183 | RUSSELL     | CLOSE        | 2006-02-15 04:34:33 |\
+|      184 | HUMPHREY    | GARLAND      | 2006-02-15 04:34:33 |\
+|      185 | MICHAEL     | BOLGER       | 2006-02-15 04:34:33 |\
+|      186 | JULIA       | ZELLWEGER    | 2006-02-15 04:34:33 |\
+|      187 | RENEE       | BALL         | 2006-02-15 04:34:33 |\
+|      188 | ROCK        | DUKAKIS      | 2006-02-15 04:34:33 |\
+|      189 | CUBA        | BIRCH        | 2006-02-15 04:34:33 |\
+|      190 | AUDREY      | BAILEY       | 2006-02-15 04:34:33 |\
+|      191 | GREGORY     | GOODING      | 2006-02-15 04:34:33 |\
+|      192 | JOHN        | SUVARI       | 2006-02-15 04:34:33 |\
+|      193 | BURT        | TEMPLE       | 2006-02-15 04:34:33 |\
+|      194 | MERYL       | ALLEN        | 2006-02-15 04:34:33 |\
+|      195 | JAYNE       | SILVERSTONE  | 2006-02-15 04:34:33 |\
+|      196 | BELA        | WALKEN       | 2006-02-15 04:34:33 |\
+|      197 | REESE       | WEST         | 2006-02-15 04:34:33 |\
+|      198 | MARY        | KEITEL       | 2006-02-15 04:34:33 |\
+|      199 | JULIA       | FAWCETT      | 2006-02-15 04:34:33 |\
+|      200 | THORA       | TEMPLE       | 2006-02-15 04:34:33 |\
+|        0 | Juanelo     | Jolore       | 2019-04-30 12:21:29 |\
++----------+-------------+--------------+---------------------+\
+201 rows in set (0.0032 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 desc copia_actor;\
++-------------+----------------------+------+-----+-------------------+-----------------------------+\
+| Field       | Type                 | Null | Key | Default           | Extra                       |\
++-------------+----------------------+------+-----+-------------------+-----------------------------+\
+| actor_id    | smallint(5) unsigned | NO   |     | 0                 |                             |\
+| first_name  | varchar(45)          | NO   |     | NULL              |                             |\
+| last_name   | varchar(45)          | NO   |     | NULL              |                             |\
+| last_update | timestamp            | NO   |     | CURRENT_TIMESTAMP | on update CURRENT_TIMESTAMP |\
++-------------+----------------------+------+-----+-------------------+-----------------------------+\
+4 rows in set (0.0005 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 call consulta_actor('A');\
+ERROR: 1318 (42000): Incorrect number of arguments for PROCEDURE eva_3.consulta_actor; expected 0, got 1\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 call cuenta_actores('A');\
+ERROR: 1318 (42000): Incorrect number of arguments for PROCEDURE eva_3.cuenta_actores; expected 2, got 1\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 call consulta_actor('A');\
+ERROR: 1318 (42000): Incorrect number of arguments for PROCEDURE eva_3.consulta_actor; expected 0, got 1\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 call consulta_actor('A');\
++----------+------------+-----------+---------------------+\
+| actor_id | first_name | last_name | last_update         |\
++----------+------------+-----------+---------------------+\
+|       58 | CHRISTIAN  | AKROYD    | 2006-02-15 04:34:33 |\
+|       76 | ANGELINA   | ASTAIRE   | 2006-02-15 04:34:33 |\
+|       92 | KIRSTEN    | AKROYD    | 2006-02-15 04:34:33 |\
+|      118 | CUBA       | ALLEN     | 2006-02-15 04:34:33 |\
+|      145 | KIM        | ALLEN     | 2006-02-15 04:34:33 |\
+|      182 | DEBBIE     | AKROYD    | 2006-02-15 04:34:33 |\
+|      194 | MERYL      | ALLEN     | 2006-02-15 04:34:33 |\
++----------+------------+-----------+---------------------+\
+7 rows in set (0.0008 sec)\
++----------+------------+-----------+---------------------+\
+| actor_id | first_name | last_name | last_update         |\
++----------+------------+-----------+---------------------+\
+|       58 | CHRISTIAN  | AKROYD    | 2006-02-15 04:34:33 |\
+|       76 | ANGELINA   | ASTAIRE   | 2006-02-15 04:34:33 |\
+|       92 | KIRSTEN    | AKROYD    | 2006-02-15 04:34:33 |\
+|      118 | CUBA       | ALLEN     | 2006-02-15 04:34:33 |\
+|      145 | KIM        | ALLEN     | 2006-02-15 04:34:33 |\
+|      182 | DEBBIE     | AKROYD    | 2006-02-15 04:34:33 |\
+|      194 | MERYL      | ALLEN     | 2006-02-15 04:34:33 |\
++----------+------------+-----------+---------------------+\
+7 rows in set (0.0008 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 call cuenta_actores('A');\
+ERROR: 1318 (42000): Incorrect number of arguments for PROCEDURE eva_3.cuenta_actores; expected 2, got 1\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 call cuenta_actores('A',@resu);\
+Query OK, 1 row affected (0.0016 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 select @resu\
+\cb2                                   -> \cb1 ;\
++-------+\
+| @resu |\
++-------+\
+|     7 |\
++-------+\
+1 row in set (0.0003 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 \\use sakila\
+Default schema set to `sakila`.\
+Fetching table and column names from `sakila` for auto-completion... Press ^C to stop.\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  sakila \cb5  SQL \cf2 \cb2 > \cb1 select sum(amount) from payment where customer_id = 592;\
++-------------+\
+| sum(amount) |\
++-------------+\
+|      111.71 |\
++-------------+\
+1 row in set (0.0031 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  sakila \cb5  SQL \cf2 \cb2 > \cb1 call total_pagos_clientes(592,@tot);\
+Query OK, 1 row affected (0.0005 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  sakila \cb5  SQL \cf2 \cb2 > \cb1 select @tot;\
++--------+\
+| @tot   |\
++--------+\
+| 111.71 |\
++--------+\
+1 row in set (0.0002 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  sakila \cb5  SQL \cf2 \cb2 > \cb1 \\use eva_3\
+Default schema set to `eva_3`.\
+Fetching table and column names from `eva_3` for auto-completion... Press ^C to stop.\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 create table actores_2(id int, nombre varchar(50), apellido varchar(50));\
+Query OK, 0 rows affected (0.0151 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 call copia_actores;\
+ERROR: 1054 (42S22): Unknown column 'customer_id' in 'field list'\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 select * from acotres_2;\
+ERROR: 1146 (42S02): Table 'eva_3.acotres_2' doesn't exist\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 select * from actores_2;\
+Empty set (0.0010 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 call copia_actores();\
+ERROR: 1054 (42S22): Unknown column 'customer_id' in 'field list'\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 select * from actores_2;\
+Empty set (0.0003 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 desc copia_actor;\
++-------------+----------------------+------+-----+-------------------+-----------------------------+\
+| Field       | Type                 | Null | Key | Default           | Extra                       |\
++-------------+----------------------+------+-----+-------------------+-----------------------------+\
+| actor_id    | smallint(5) unsigned | NO   |     | 0                 |                             |\
+| first_name  | varchar(45)          | NO   |     | NULL              |                             |\
+| last_name   | varchar(45)          | NO   |     | NULL              |                             |\
+| last_update | timestamp            | NO   |     | CURRENT_TIMESTAMP | on update CURRENT_TIMESTAMP |\
++-------------+----------------------+------+-----+-------------------+-----------------------------+\
+4 rows in set (0.0007 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 call copia_actores();\
+Query OK, 0 rows affected (0.0300 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 select * from actores_2;\
++-----+-------------+--------------+\
+| id  | nombre      | apellido     |\
++-----+-------------+--------------+\
+|   1 | PENELOPE    | GUINESS      |\
+|   2 | NICK        | WAHLBERG     |\
+|   3 | ED          | CHASE        |\
+|   4 | JENNIFER    | DAVIS        |\
+|   5 | JOHNNY      | LOLLOBRIGIDA |\
+|   6 | BETTE       | NICHOLSON    |\
+|   7 | GRACE       | MOSTEL       |\
+|   8 | MATTHEW     | JOHANSSON    |\
+|   9 | JOE         | SWANK        |\
+|  10 | CHRISTIAN   | GABLE        |\
+|  11 | ZERO        | CAGE         |\
+|  12 | KARL        | BERRY        |\
+|  13 | UMA         | WOOD         |\
+|  14 | VIVIEN      | BERGEN       |\
+|  15 | CUBA        | OLIVIER      |\
+|  16 | FRED        | COSTNER      |\
+|  17 | HELEN       | VOIGHT       |\
+|  18 | DAN         | TORN         |\
+|  19 | BOB         | FAWCETT      |\
+|  20 | LUCILLE     | TRACY        |\
+|  21 | KIRSTEN     | PALTROW      |\
+|  22 | ELVIS       | MARX         |\
+|  23 | SANDRA      | KILMER       |\
+|  24 | CAMERON     | STREEP       |\
+|  25 | KEVIN       | BLOOM        |\
+|  26 | RIP         | CRAWFORD     |\
+|  27 | JULIA       | MCQUEEN      |\
+|  28 | WOODY       | HOFFMAN      |\
+|  29 | ALEC        | WAYNE        |\
+|  30 | SANDRA      | PECK         |\
+|  31 | SISSY       | SOBIESKI     |\
+|  32 | TIM         | HACKMAN      |\
+|  33 | MILLA       | PECK         |\
+|  34 | AUDREY      | OLIVIER      |\
+|  35 | JUDY        | DEAN         |\
+|  36 | BURT        | DUKAKIS      |\
+|  37 | VAL         | BOLGER       |\
+|  38 | TOM         | MCKELLEN     |\
+|  39 | GOLDIE      | BRODY        |\
+|  40 | JOHNNY      | CAGE         |\
+|  41 | JODIE       | DEGENERES    |\
+|  42 | TOM         | MIRANDA      |\
+|  43 | KIRK        | JOVOVICH     |\
+|  44 | NICK        | STALLONE     |\
+|  45 | REESE       | KILMER       |\
+|  46 | PARKER      | GOLDBERG     |\
+|  47 | JULIA       | BARRYMORE    |\
+|  48 | FRANCES     | DAY-LEWIS    |\
+|  49 | ANNE        | CRONYN       |\
+|  50 | NATALIE     | HOPKINS      |\
+|  51 | GARY        | PHOENIX      |\
+|  52 | CARMEN      | HUNT         |\
+|  53 | MENA        | TEMPLE       |\
+|  54 | PENELOPE    | PINKETT      |\
+|  55 | FAY         | KILMER       |\
+|  56 | DAN         | HARRIS       |\
+|  57 | JUDE        | CRUISE       |\
+|  58 | CHRISTIAN   | AKROYD       |\
+|  59 | DUSTIN      | TAUTOU       |\
+|  60 | HENRY       | BERRY        |\
+|  61 | CHRISTIAN   | NEESON       |\
+|  62 | JAYNE       | NEESON       |\
+|  63 | CAMERON     | WRAY         |\
+|  64 | RAY         | JOHANSSON    |\
+|  65 | ANGELA      | HUDSON       |\
+|  66 | MARY        | TANDY        |\
+|  67 | JESSICA     | BAILEY       |\
+|  68 | RIP         | WINSLET      |\
+|  69 | KENNETH     | PALTROW      |\
+|  70 | MICHELLE    | MCCONAUGHEY  |\
+|  71 | ADAM        | GRANT        |\
+|  72 | SEAN        | WILLIAMS     |\
+|  73 | GARY        | PENN         |\
+|  74 | MILLA       | KEITEL       |\
+|  75 | BURT        | POSEY        |\
+|  76 | ANGELINA    | ASTAIRE      |\
+|  77 | CARY        | MCCONAUGHEY  |\
+|  78 | GROUCHO     | SINATRA      |\
+|  79 | MAE         | HOFFMAN      |\
+|  80 | RALPH       | CRUZ         |\
+|  81 | SCARLETT    | DAMON        |\
+|  82 | WOODY       | JOLIE        |\
+|  83 | BEN         | WILLIS       |\
+|  84 | JAMES       | PITT         |\
+|  85 | MINNIE      | ZELLWEGER    |\
+|  86 | GREG        | CHAPLIN      |\
+|  87 | SPENCER     | PECK         |\
+|  88 | KENNETH     | PESCI        |\
+|  89 | CHARLIZE    | DENCH        |\
+|  90 | SEAN        | GUINESS      |\
+|  91 | CHRISTOPHER | BERRY        |\
+|  92 | KIRSTEN     | AKROYD       |\
+|  93 | ELLEN       | PRESLEY      |\
+|  94 | KENNETH     | TORN         |\
+|  95 | DARYL       | WAHLBERG     |\
+|  96 | GENE        | WILLIS       |\
+|  97 | MEG         | HAWKE        |\
+|  98 | CHRIS       | BRIDGES      |\
+|  99 | JIM         | MOSTEL       |\
+| 100 | SPENCER     | DEPP         |\
+| 101 | SUSAN       | DAVIS        |\
+| 102 | WALTER      | TORN         |\
+| 103 | MATTHEW     | LEIGH        |\
+| 104 | PENELOPE    | CRONYN       |\
+| 105 | SIDNEY      | CROWE        |\
+| 106 | GROUCHO     | DUNST        |\
+| 107 | GINA        | DEGENERES    |\
+| 108 | WARREN      | NOLTE        |\
+| 109 | SYLVESTER   | DERN         |\
+| 110 | SUSAN       | DAVIS        |\
+| 111 | CAMERON     | ZELLWEGER    |\
+| 112 | RUSSELL     | BACALL       |\
+| 113 | MORGAN      | HOPKINS      |\
+| 114 | MORGAN      | MCDORMAND    |\
+| 115 | HARRISON    | BALE         |\
+| 116 | DAN         | STREEP       |\
+| 117 | RENEE       | TRACY        |\
+| 118 | CUBA        | ALLEN        |\
+| 119 | WARREN      | JACKMAN      |\
+| 120 | PENELOPE    | MONROE       |\
+| 121 | LIZA        | BERGMAN      |\
+| 122 | SALMA       | NOLTE        |\
+| 123 | JULIANNE    | DENCH        |\
+| 124 | SCARLETT    | BENING       |\
+| 125 | ALBERT      | NOLTE        |\
+| 126 | FRANCES     | TOMEI        |\
+| 127 | KEVIN       | GARLAND      |\
+| 128 | CATE        | MCQUEEN      |\
+| 129 | DARYL       | CRAWFORD     |\
+| 130 | GRETA       | KEITEL       |\
+| 131 | JANE        | JACKMAN      |\
+| 132 | ADAM        | HOPPER       |\
+| 133 | RICHARD     | PENN         |\
+| 134 | GENE        | HOPKINS      |\
+| 135 | RITA        | REYNOLDS     |\
+| 136 | ED          | MANSFIELD    |\
+| 137 | MORGAN      | WILLIAMS     |\
+| 138 | LUCILLE     | DEE          |\
+| 139 | EWAN        | GOODING      |\
+| 140 | WHOOPI      | HURT         |\
+| 141 | CATE        | HARRIS       |\
+| 142 | JADA        | RYDER        |\
+| 143 | RIVER       | DEAN         |\
+| 144 | ANGELA      | WITHERSPOON  |\
+| 145 | KIM         | ALLEN        |\
+| 146 | ALBERT      | JOHANSSON    |\
+| 147 | FAY         | WINSLET      |\
+| 148 | EMILY       | DEE          |\
+| 149 | RUSSELL     | TEMPLE       |\
+| 150 | JAYNE       | NOLTE        |\
+| 151 | GEOFFREY    | HESTON       |\
+| 152 | BEN         | HARRIS       |\
+| 153 | MINNIE      | KILMER       |\
+| 154 | MERYL       | GIBSON       |\
+| 155 | IAN         | TANDY        |\
+| 156 | FAY         | WOOD         |\
+| 157 | GRETA       | MALDEN       |\
+| 158 | VIVIEN      | BASINGER     |\
+| 159 | LAURA       | BRODY        |\
+| 160 | CHRIS       | DEPP         |\
+| 161 | HARVEY      | HOPE         |\
+| 162 | OPRAH       | KILMER       |\
+| 163 | CHRISTOPHER | WEST         |\
+| 164 | HUMPHREY    | WILLIS       |\
+| 165 | AL          | GARLAND      |\
+| 166 | NICK        | DEGENERES    |\
+| 167 | LAURENCE    | BULLOCK      |\
+| 168 | WILL        | WILSON       |\
+| 169 | KENNETH     | HOFFMAN      |\
+| 170 | MENA        | HOPPER       |\
+| 171 | OLYMPIA     | PFEIFFER     |\
+| 172 | GROUCHO     | WILLIAMS     |\
+| 173 | ALAN        | DREYFUSS     |\
+| 174 | MICHAEL     | BENING       |\
+| 175 | WILLIAM     | HACKMAN      |\
+| 176 | JON         | CHASE        |\
+| 177 | GENE        | MCKELLEN     |\
+| 178 | LISA        | MONROE       |\
+| 179 | ED          | GUINESS      |\
+| 180 | JEFF        | SILVERSTONE  |\
+| 181 | MATTHEW     | CARREY       |\
+| 182 | DEBBIE      | AKROYD       |\
+| 183 | RUSSELL     | CLOSE        |\
+| 184 | HUMPHREY    | GARLAND      |\
+| 185 | MICHAEL     | BOLGER       |\
+| 186 | JULIA       | ZELLWEGER    |\
+| 187 | RENEE       | BALL         |\
+| 188 | ROCK        | DUKAKIS      |\
+| 189 | CUBA        | BIRCH        |\
+| 190 | AUDREY      | BAILEY       |\
+| 191 | GREGORY     | GOODING      |\
+| 192 | JOHN        | SUVARI       |\
+| 193 | BURT        | TEMPLE       |\
+| 194 | MERYL       | ALLEN        |\
+| 195 | JAYNE       | SILVERSTONE  |\
+| 196 | BELA        | WALKEN       |\
+| 197 | REESE       | WEST         |\
+| 198 | MARY        | KEITEL       |\
+| 199 | JULIA       | FAWCETT      |\
+| 200 | THORA       | TEMPLE       |\
+|   0 | Juanelo     | Jolore       |\
++-----+-------------+--------------+\
+201 rows in set (0.0006 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 alter table actores_2\
+\cb2                                   -> \cb1 add rfc text;\
+Query OK, 0 rows affected (0.0409 sec)\
+\
+Records: 0  Duplicates: 0  Warnings: 0\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 select * from actores_2;\
++-----+-------------+--------------+------+\
+| id  | nombre      | apellido     | rfc  |\
++-----+-------------+--------------+------+\
+|   1 | PENELOPE    | GUINESS      | NULL |\
+|   2 | NICK        | WAHLBERG     | NULL |\
+|   3 | ED          | CHASE        | NULL |\
+|   4 | JENNIFER    | DAVIS        | NULL |\
+|   5 | JOHNNY      | LOLLOBRIGIDA | NULL |\
+|   6 | BETTE       | NICHOLSON    | NULL |\
+|   7 | GRACE       | MOSTEL       | NULL |\
+|   8 | MATTHEW     | JOHANSSON    | NULL |\
+|   9 | JOE         | SWANK        | NULL |\
+|  10 | CHRISTIAN   | GABLE        | NULL |\
+|  11 | ZERO        | CAGE         | NULL |\
+|  12 | KARL        | BERRY        | NULL |\
+|  13 | UMA         | WOOD         | NULL |\
+|  14 | VIVIEN      | BERGEN       | NULL |\
+|  15 | CUBA        | OLIVIER      | NULL |\
+|  16 | FRED        | COSTNER      | NULL |\
+|  17 | HELEN       | VOIGHT       | NULL |\
+|  18 | DAN         | TORN         | NULL |\
+|  19 | BOB         | FAWCETT      | NULL |\
+|  20 | LUCILLE     | TRACY        | NULL |\
+|  21 | KIRSTEN     | PALTROW      | NULL |\
+|  22 | ELVIS       | MARX         | NULL |\
+|  23 | SANDRA      | KILMER       | NULL |\
+|  24 | CAMERON     | STREEP       | NULL |\
+|  25 | KEVIN       | BLOOM        | NULL |\
+|  26 | RIP         | CRAWFORD     | NULL |\
+|  27 | JULIA       | MCQUEEN      | NULL |\
+|  28 | WOODY       | HOFFMAN      | NULL |\
+|  29 | ALEC        | WAYNE        | NULL |\
+|  30 | SANDRA      | PECK         | NULL |\
+|  31 | SISSY       | SOBIESKI     | NULL |\
+|  32 | TIM         | HACKMAN      | NULL |\
+|  33 | MILLA       | PECK         | NULL |\
+|  34 | AUDREY      | OLIVIER      | NULL |\
+|  35 | JUDY        | DEAN         | NULL |\
+|  36 | BURT        | DUKAKIS      | NULL |\
+|  37 | VAL         | BOLGER       | NULL |\
+|  38 | TOM         | MCKELLEN     | NULL |\
+|  39 | GOLDIE      | BRODY        | NULL |\
+|  40 | JOHNNY      | CAGE         | NULL |\
+|  41 | JODIE       | DEGENERES    | NULL |\
+|  42 | TOM         | MIRANDA      | NULL |\
+|  43 | KIRK        | JOVOVICH     | NULL |\
+|  44 | NICK        | STALLONE     | NULL |\
+|  45 | REESE       | KILMER       | NULL |\
+|  46 | PARKER      | GOLDBERG     | NULL |\
+|  47 | JULIA       | BARRYMORE    | NULL |\
+|  48 | FRANCES     | DAY-LEWIS    | NULL |\
+|  49 | ANNE        | CRONYN       | NULL |\
+|  50 | NATALIE     | HOPKINS      | NULL |\
+|  51 | GARY        | PHOENIX      | NULL |\
+|  52 | CARMEN      | HUNT         | NULL |\
+|  53 | MENA        | TEMPLE       | NULL |\
+|  54 | PENELOPE    | PINKETT      | NULL |\
+|  55 | FAY         | KILMER       | NULL |\
+|  56 | DAN         | HARRIS       | NULL |\
+|  57 | JUDE        | CRUISE       | NULL |\
+|  58 | CHRISTIAN   | AKROYD       | NULL |\
+|  59 | DUSTIN      | TAUTOU       | NULL |\
+|  60 | HENRY       | BERRY        | NULL |\
+|  61 | CHRISTIAN   | NEESON       | NULL |\
+|  62 | JAYNE       | NEESON       | NULL |\
+|  63 | CAMERON     | WRAY         | NULL |\
+|  64 | RAY         | JOHANSSON    | NULL |\
+|  65 | ANGELA      | HUDSON       | NULL |\
+|  66 | MARY        | TANDY        | NULL |\
+|  67 | JESSICA     | BAILEY       | NULL |\
+|  68 | RIP         | WINSLET      | NULL |\
+|  69 | KENNETH     | PALTROW      | NULL |\
+|  70 | MICHELLE    | MCCONAUGHEY  | NULL |\
+|  71 | ADAM        | GRANT        | NULL |\
+|  72 | SEAN        | WILLIAMS     | NULL |\
+|  73 | GARY        | PENN         | NULL |\
+|  74 | MILLA       | KEITEL       | NULL |\
+|  75 | BURT        | POSEY        | NULL |\
+|  76 | ANGELINA    | ASTAIRE      | NULL |\
+|  77 | CARY        | MCCONAUGHEY  | NULL |\
+|  78 | GROUCHO     | SINATRA      | NULL |\
+|  79 | MAE         | HOFFMAN      | NULL |\
+|  80 | RALPH       | CRUZ         | NULL |\
+|  81 | SCARLETT    | DAMON        | NULL |\
+|  82 | WOODY       | JOLIE        | NULL |\
+|  83 | BEN         | WILLIS       | NULL |\
+|  84 | JAMES       | PITT         | NULL |\
+|  85 | MINNIE      | ZELLWEGER    | NULL |\
+|  86 | GREG        | CHAPLIN      | NULL |\
+|  87 | SPENCER     | PECK         | NULL |\
+|  88 | KENNETH     | PESCI        | NULL |\
+|  89 | CHARLIZE    | DENCH        | NULL |\
+|  90 | SEAN        | GUINESS      | NULL |\
+|  91 | CHRISTOPHER | BERRY        | NULL |\
+|  92 | KIRSTEN     | AKROYD       | NULL |\
+|  93 | ELLEN       | PRESLEY      | NULL |\
+|  94 | KENNETH     | TORN         | NULL |\
+|  95 | DARYL       | WAHLBERG     | NULL |\
+|  96 | GENE        | WILLIS       | NULL |\
+|  97 | MEG         | HAWKE        | NULL |\
+|  98 | CHRIS       | BRIDGES      | NULL |\
+|  99 | JIM         | MOSTEL       | NULL |\
+| 100 | SPENCER     | DEPP         | NULL |\
+| 101 | SUSAN       | DAVIS        | NULL |\
+| 102 | WALTER      | TORN         | NULL |\
+| 103 | MATTHEW     | LEIGH        | NULL |\
+| 104 | PENELOPE    | CRONYN       | NULL |\
+| 105 | SIDNEY      | CROWE        | NULL |\
+| 106 | GROUCHO     | DUNST        | NULL |\
+| 107 | GINA        | DEGENERES    | NULL |\
+| 108 | WARREN      | NOLTE        | NULL |\
+| 109 | SYLVESTER   | DERN         | NULL |\
+| 110 | SUSAN       | DAVIS        | NULL |\
+| 111 | CAMERON     | ZELLWEGER    | NULL |\
+| 112 | RUSSELL     | BACALL       | NULL |\
+| 113 | MORGAN      | HOPKINS      | NULL |\
+| 114 | MORGAN      | MCDORMAND    | NULL |\
+| 115 | HARRISON    | BALE         | NULL |\
+| 116 | DAN         | STREEP       | NULL |\
+| 117 | RENEE       | TRACY        | NULL |\
+| 118 | CUBA        | ALLEN        | NULL |\
+| 119 | WARREN      | JACKMAN      | NULL |\
+| 120 | PENELOPE    | MONROE       | NULL |\
+| 121 | LIZA        | BERGMAN      | NULL |\
+| 122 | SALMA       | NOLTE        | NULL |\
+| 123 | JULIANNE    | DENCH        | NULL |\
+| 124 | SCARLETT    | BENING       | NULL |\
+| 125 | ALBERT      | NOLTE        | NULL |\
+| 126 | FRANCES     | TOMEI        | NULL |\
+| 127 | KEVIN       | GARLAND      | NULL |\
+| 128 | CATE        | MCQUEEN      | NULL |\
+| 129 | DARYL       | CRAWFORD     | NULL |\
+| 130 | GRETA       | KEITEL       | NULL |\
+| 131 | JANE        | JACKMAN      | NULL |\
+| 132 | ADAM        | HOPPER       | NULL |\
+| 133 | RICHARD     | PENN         | NULL |\
+| 134 | GENE        | HOPKINS      | NULL |\
+| 135 | RITA        | REYNOLDS     | NULL |\
+| 136 | ED          | MANSFIELD    | NULL |\
+| 137 | MORGAN      | WILLIAMS     | NULL |\
+| 138 | LUCILLE     | DEE          | NULL |\
+| 139 | EWAN        | GOODING      | NULL |\
+| 140 | WHOOPI      | HURT         | NULL |\
+| 141 | CATE        | HARRIS       | NULL |\
+| 142 | JADA        | RYDER        | NULL |\
+| 143 | RIVER       | DEAN         | NULL |\
+| 144 | ANGELA      | WITHERSPOON  | NULL |\
+| 145 | KIM         | ALLEN        | NULL |\
+| 146 | ALBERT      | JOHANSSON    | NULL |\
+| 147 | FAY         | WINSLET      | NULL |\
+| 148 | EMILY       | DEE          | NULL |\
+| 149 | RUSSELL     | TEMPLE       | NULL |\
+| 150 | JAYNE       | NOLTE        | NULL |\
+| 151 | GEOFFREY    | HESTON       | NULL |\
+| 152 | BEN         | HARRIS       | NULL |\
+| 153 | MINNIE      | KILMER       | NULL |\
+| 154 | MERYL       | GIBSON       | NULL |\
+| 155 | IAN         | TANDY        | NULL |\
+| 156 | FAY         | WOOD         | NULL |\
+| 157 | GRETA       | MALDEN       | NULL |\
+| 158 | VIVIEN      | BASINGER     | NULL |\
+| 159 | LAURA       | BRODY        | NULL |\
+| 160 | CHRIS       | DEPP         | NULL |\
+| 161 | HARVEY      | HOPE         | NULL |\
+| 162 | OPRAH       | KILMER       | NULL |\
+| 163 | CHRISTOPHER | WEST         | NULL |\
+| 164 | HUMPHREY    | WILLIS       | NULL |\
+| 165 | AL          | GARLAND      | NULL |\
+| 166 | NICK        | DEGENERES    | NULL |\
+| 167 | LAURENCE    | BULLOCK      | NULL |\
+| 168 | WILL        | WILSON       | NULL |\
+| 169 | KENNETH     | HOFFMAN      | NULL |\
+| 170 | MENA        | HOPPER       | NULL |\
+| 171 | OLYMPIA     | PFEIFFER     | NULL |\
+| 172 | GROUCHO     | WILLIAMS     | NULL |\
+| 173 | ALAN        | DREYFUSS     | NULL |\
+| 174 | MICHAEL     | BENING       | NULL |\
+| 175 | WILLIAM     | HACKMAN      | NULL |\
+| 176 | JON         | CHASE        | NULL |\
+| 177 | GENE        | MCKELLEN     | NULL |\
+| 178 | LISA        | MONROE       | NULL |\
+| 179 | ED          | GUINESS      | NULL |\
+| 180 | JEFF        | SILVERSTONE  | NULL |\
+| 181 | MATTHEW     | CARREY       | NULL |\
+| 182 | DEBBIE      | AKROYD       | NULL |\
+| 183 | RUSSELL     | CLOSE        | NULL |\
+| 184 | HUMPHREY    | GARLAND      | NULL |\
+| 185 | MICHAEL     | BOLGER       | NULL |\
+| 186 | JULIA       | ZELLWEGER    | NULL |\
+| 187 | RENEE       | BALL         | NULL |\
+| 188 | ROCK        | DUKAKIS      | NULL |\
+| 189 | CUBA        | BIRCH        | NULL |\
+| 190 | AUDREY      | BAILEY       | NULL |\
+| 191 | GREGORY     | GOODING      | NULL |\
+| 192 | JOHN        | SUVARI       | NULL |\
+| 193 | BURT        | TEMPLE       | NULL |\
+| 194 | MERYL       | ALLEN        | NULL |\
+| 195 | JAYNE       | SILVERSTONE  | NULL |\
+| 196 | BELA        | WALKEN       | NULL |\
+| 197 | REESE       | WEST         | NULL |\
+| 198 | MARY        | KEITEL       | NULL |\
+| 199 | JULIA       | FAWCETT      | NULL |\
+| 200 | THORA       | TEMPLE       | NULL |\
+|   0 | Juanelo     | Jolore       | NULL |\
++-----+-------------+--------------+------+\
+201 rows in set (0.0004 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 alter table actores_2 add fecha_nac dale after apellido;\
+ERROR: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'dale after apellido' at line 1\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 alter table actores_2 add fecha_nac date after apellido;\
+Query OK, 0 rows affected (0.0457 sec)\
+\
+Records: 0  Duplicates: 0  Warnings: 0\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 desc actores_2\
+\cb2                                   -> \cb1 ;\
++-----------+-------------+------+-----+---------+-------+\
+| Field     | Type        | Null | Key | Default | Extra |\
++-----------+-------------+------+-----+---------+-------+\
+| id        | int(11)     | YES  |     | NULL    |       |\
+| nombre    | varchar(50) | YES  |     | NULL    |       |\
+| apellido  | varchar(50) | YES  |     | NULL    |       |\
+| fecha_nac | date        | YES  |     | NULL    |       |\
+| rfc       | text        | YES  |     | NULL    |       |\
++-----------+-------------+------+-----+---------+-------+\
+5 rows in set (0.0006 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 alter table actores_2 add apellido_mat text after apellido;\
+Query OK, 0 rows affected (0.0482 sec)\
+\
+Records: 0  Duplicates: 0  Warnings: 0\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 desc actores_2 ;\
++--------------+-------------+------+-----+---------+-------+\
+| Field        | Type        | Null | Key | Default | Extra |\
++--------------+-------------+------+-----+---------+-------+\
+| id           | int(11)     | YES  |     | NULL    |       |\
+| nombre       | varchar(50) | YES  |     | NULL    |       |\
+| apellido     | varchar(50) | YES  |     | NULL    |       |\
+| apellido_mat | text        | YES  |     | NULL    |       |\
+| fecha_nac    | date        | YES  |     | NULL    |       |\
+| rfc          | text        | YES  |     | NULL    |       |\
++--------------+-------------+------+-----+---------+-------+\
+6 rows in set (0.0004 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 insert into actores_2 \
+\cb2                                   -> \cb1 values(1000, 'EMILIANO', 'ITUARTE', 'SANCHEZ', '1998-07-03');\
+ERROR: 1136 (21S01): Column count doesn't match value count at row 1\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 insert into actores_2  values(1000, 'EMILIANO', 'ITUARTE', 'SANCHEZ', '1998-07-03','');\
+Query OK, 1 row affected (0.0006 sec)\
+\
+\cf3 \cb4  My\cf5 SQL \cf7 \cb8  localhost:8889 \cb9  eva_3 \cb5  SQL \cf2 \cb2 > \cb1 \
+}
